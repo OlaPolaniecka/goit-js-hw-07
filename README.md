@@ -1,2 +1,1 @@
-# goit-js-hw-07
- 
+https://olapolaniecka.github.io/goit-js-hw-07/
