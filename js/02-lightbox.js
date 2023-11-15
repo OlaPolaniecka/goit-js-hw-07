@@ -1,4 +1,3 @@
-import simpleLightbox from "simplelightbox";
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
@@ -6,25 +5,9 @@ console.log(galleryItems);
 
 const gallery = document.querySelector(".gallery");
 
-let lightbox;
-const closeLightBox = (event) => {
-  if (event.key === "Escape") {
-    lightbox.close();
-    gallery.removeEventListener("keyup", closeLightBox);
-  }
-};
-
-gallery.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (event.target.classList.contains("gallery__image")) {
-    lightbox = new simpleLightbox(".gallery .gallery__item", {
-      captionsData: "alt",
-      captionDelay: 250,
-    });
-    lightbox.open();
-    gallery.addEventListener("keyup", closeLightBox);
-  }
+lightbox = new simpleLightbox(".gallery .gallery__item", {
+  captionsData: "alt",
+  captionDelay: 250,
 });
 
 for (let item of galleryItems) {
