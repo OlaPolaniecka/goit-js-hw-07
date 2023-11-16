@@ -5,11 +5,6 @@ console.log(galleryItems);
 
 const gallery = document.querySelector(".gallery");
 
-lightbox = new simpleLightbox(".gallery .gallery__item", {
-  captionsData: "alt",
-  captionDelay: 250,
-});
-
 for (let item of galleryItems) {
   let gallery__element = document.createElement("li");
   let gallery__link = document.createElement("a");
@@ -25,3 +20,8 @@ for (let item of galleryItems) {
   gallery__element.append(gallery__link);
   gallery.append(gallery__element);
 }
+
+lightbox = new SimpleLightbox(".gallery .gallery__item", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
