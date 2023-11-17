@@ -21,7 +21,7 @@ for (let item of galleryItems) {
   gallery.append(gallery__element);
 }
 
-lightbox = new SimpleLightbox(".gallery .gallery__item", {
+const lightbox = new SimpleLightbox(".gallery .gallery__item", {
   captionsData: "alt",
   captionDelay: 250,
 });
